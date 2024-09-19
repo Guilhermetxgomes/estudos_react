@@ -1,8 +1,13 @@
 import { useState } from 'react'
+import Button from './Button'
 
 function Evento(){
   function aumentarContador(){
     setValorContador(valorContador + 1)
+  }
+
+  function diminuirContador(){
+    setValorContador(valorContador - 1)
   }
 
   const [valorContador, setValorContador] = useState()
@@ -10,7 +15,8 @@ function Evento(){
   return(
     <>
       <p>Clique para aumentar a contagem</p>
-      <button onClick={aumentarContador}>Ativar</button>
+      <Button event={aumentarContador} text="Aumentar contador" />
+      <Button event={diminuirContador} text="Diminuir contador" />
       <p>O valor do contador é: {valorContador}</p>
     </>
 
