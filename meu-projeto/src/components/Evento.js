@@ -1,13 +1,17 @@
+import { useState } from 'react'
+
 function Evento(){
-  function meuEvento(){
-    console.log("Fui ativado")
+  function aumentarContador(){
+    setValorContador(valorContador + 1)
   }
 
+  const [valorContador, setValorContador] = useState()
 
   return(
     <>
       <p>Clique para aumentar a contagem</p>
-      <button onClick={meuEvento}>Ativar</button>
+      <button onClick={aumentarContador}>Ativar</button>
+      <p>O valor do contador é: {valorContador}</p>
     </>
 
   )
