@@ -10,7 +10,7 @@ function Evento(){
     setValorContador(valorContador - 1)
   }
 
-  const [valorContador, setValorContador] = useState()
+  const [valorContador, setValorContador] = useState(0)
 
   return(
     <>

@@ -3,6 +3,8 @@ import Home from './pages/Home'
 import Contato from './pages/Contato'
 import Empresa from './pages/Empresa'
 import Footer from './pages/Footer'
+import Evento from './components/Evento'
+import Checkbox from  '@mui/material/Checkbox'
 
 
 function App() {
@@ -24,6 +26,11 @@ function App() {
       </Routes>
       <Footer />
     </Router>
+    // <>
+
+    //   <Evento />
+    //   <Checkbox />
+    // </>
 
 
   )
