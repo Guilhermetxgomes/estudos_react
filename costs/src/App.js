@@ -3,31 +3,27 @@ import Home from './components/pages/Home'
 import Contact from './components/pages/Contact'
 import Company from './components/pages/Company'
 import NewProject from './components/pages/NewProject'
+import Projects from './components/pages/Projects'
 
 import Container from './components/layout/Container'
+import Navbar from './components/layout/Navbar'
+import Footer from './components/layout/Footer'
 
 function App() {
   return (
     <Router>
-      <p>Ola</p>
-      <div>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/contact">Contato</Link></li>
-          <li><Link to="/company">Empresa</Link></li>
-          <li><Link to="/newproject">Novo Projeto</Link></li>
-        </ul>
-      </div>
+      <Navbar />
       <Container customClass="min-height">
         <Routes>
           {/* Usando a prop element com o componente JSX */}
           <Route path="/" element={<Home />} />
           <Route path="/company" element={<Company />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/project" element={<Projects />} />
           <Route path="/newproject" element={<NewProject />} />
         </Routes>
       </Container>
-      <p>Footer</p>
+      <Footer />
     </Router>
   );
 }
